@@ -2,7 +2,8 @@
   "name": "Terse",
   "version": "0.0.1",
   "description": "CSS and HTML uglification",
-  "main": "index.js",
+  "bin": "bin/index.js",
+  "main": "lib/terse.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/richgilbank/Terse",
   "dependencies": {
     "commander": "^2.6.0",
-    "css": "^2.2.0"
+    "css": "^2.2.0",
+    "phantomjs": "^1.9.15"
   }
 }
