@@ -18,8 +18,12 @@
   },
   "homepage": "https://github.com/richgilbank/Terse",
   "dependencies": {
+    "bluebird": "^2.9.12",
+    "cheerio": "^0.18.0",
     "commander": "^2.6.0",
     "css": "^2.2.0",
-    "phantomjs": "^1.9.15"
+    "lodash": "^3.3.1",
+    "phantomjs": "^1.9.15",
+    "request-promise": "^0.4.0"
   }
 }
