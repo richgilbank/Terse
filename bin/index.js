@@ -8,6 +8,8 @@ var terse = require('../lib/terse.js'),
 program
   .version(pkg.version)
   .usage('[options] <HTML and CSS file paths>')
+  .option('-c, --css-filename <value>', 'Output filename for the CSS', 'styles.trs.css')
+  .option('-d, --destination <value>', 'Destination directory for output', '')
   .parse(process.argv);
 
 if(!program.args.length) {
@@ -15,7 +17,10 @@ if(!program.args.length) {
 }
 
 var files = program.args;
-var options = {};
+var options = {
+  cssFilename: program.cssFilename,
+  destination: program.destination
+};
 
 terse(files, options, function(output) {
   console.log(output);
