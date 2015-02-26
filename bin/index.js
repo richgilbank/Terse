@@ -9,7 +9,7 @@ program
   .version(pkg.version)
   .usage('[options] <HTML and CSS file paths>')
   .option('-c, --css-filename <value>', 'Output filename for the CSS', 'styles.trs.css')
-  .option('-d, --destination <value>', 'Destination directory for output', '')
+  .option('-d, --destination <value>', 'Destination directory for output', process.cwd())
   .parse(process.argv);
 
 if(!program.args.length) {
