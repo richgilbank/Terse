@@ -13,7 +13,7 @@ In CSS, `.my-awesome-module .my-awesome-module__child-with-stuff {...}` would be
 Many people, myself included, have taken to writing CSS in [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) syntax (or something similar), which can become quite verbose at times. For development speed and readability, this is a huge win. For files being shipped over the wire, not so much. Terse can be added as a build step to your workflow, allowing you to write CSS in a familiar way, without sacrificing page performance. gZipping your files seems to reduce some repetition, but I've yet to test how much it's able to work on in a stream without a comprehension of the entire file /shrug.
 
 ### Numbers
-Using twitter.com (unauthenticated) as a benchmark
+Using twitter.com (unauthenticated) as a benchmark (file sizes in bytes):
 
 ##### CSS
 With gzip? | Before  | After   | Savings
