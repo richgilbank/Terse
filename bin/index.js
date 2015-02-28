@@ -8,7 +8,7 @@ var terse = require('../lib/terse.js'),
 program
   .version(pkg.version)
   .usage('[options] <HTML file paths>')
-  .option('-c, --css-filename <value>', 'Output filename for the CSS', 'styles.trs.css')
+  .option('-c, --concat <filename>', 'Concatenate the stylesheets into a file named <filename>')
   .option('-d, --destination <value>', 'Destination directory for output', process.cwd())
   .parse(process.argv);
 
