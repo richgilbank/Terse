@@ -10,7 +10,7 @@ Once provided with an HTML file (or multiple), it will load them up in PhantomJS
 In CSS, `.my-awesome-module .my-awesome-module__child-with-stuff {...}` would become something like `.t0 .t1 {...}`.
 
 ### Why?
-Many people, myself included, have taken to writing CSS in [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) syntax (or something similar), which can become quite verbose at times. For development speed and readability, this is a huge win. For files being shipped over the wire, not so much. Terse can be added as a build step to your workflow, allowing you to write CSS in a familiar way, without sacrificing page performance. gZipping your files seems to reduce some repetition, but I've yet to test how much it's able to work on in a stream without a comprehension of the entire file /shrug.
+Many people, myself included, have taken to writing CSS in [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) syntax (or something similar), which can become quite verbose at times. For development speed and readability, this is a huge win. For files being shipped over the wire, not so much. Terse can be added as a build step to your workflow, allowing you to write CSS in a familiar way, without sacrificing page performance.
 
 ### Numbers
 Using twitter.com (unauthenticated) as a benchmark (file sizes in bytes):
@@ -28,7 +28,7 @@ No         | 58,326  | 54,138  | 7%
 Yes        | 13,063  | 12,842  | 2%
 
 ### Downside
-There are some pretty substantial drawbacks to Terse. The main one is (like Uncss) that classes added via JS aren't known to it, so classes being added won't match the names of the classes in the CSS. One potential way around this would be to have a JSON file that maps an identifier to a class name (i.e. `{MAIN_NAV_DROPDOWN: '.nav__dropdown'}`), and adding it to the list of files to parse. A build step could then import that into your main JS file. 
+There are some pretty substantial drawbacks to Terse. The main one is (like Uncss) that classes added via JS after user interactions aren't known to it, so classes being added won't match the names of the classes in the CSS. One potential way around this would be to have a JSON file that maps an identifier to a class name (i.e. `{MAIN_NAV_DROPDOWN: '.nav__dropdown'}`), and adding it to the list of files to parse. A build step could then import that into your main JS file. 
 
 ### Usage
 To install Terse globally, run `npm install -g`.
