@@ -27,6 +27,9 @@ With gzip? | Before  | After   | Savings
 No         | 58,326  | 54,138  | 7%
 Yes        | 13,063  | 12,842  | 2%
 
+### Downside
+There are some pretty substantial drawbacks to Terse. The main one is (like Uncss) that classes added via JS aren't known to it, so classes being added won't match the names of the classes in the CSS. One potential way around this would be to have a JSON file that maps an identifier to a class name (i.e. `{MAIN_NAV_DROPDOWN: '.nav__dropdown'}`), and adding it to the list of files to parse. A build step could then import that into your main JS file. 
+
 ### Usage
 To install Terse globally, run `npm install -g`.
 ```
