@@ -18,7 +18,7 @@ if(!program.args.length) {
 
 var files = program.args;
 var options = {
-  cssFilename: program.cssFilename,
+  concat: program.concat,
   destination: program.destination
 };
 
