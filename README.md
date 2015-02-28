@@ -12,6 +12,21 @@ In CSS, `.my-awesome-module .my-awesome-module__child-with-stuff {...}` would be
 ### Why?
 Many people, myself included, have taken to writing CSS in [BEM](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/) syntax (or something similar), which can become quite verbose at times. For development speed and readability, this is a huge win. For files being shipped over the wire, not so much. Terse can be added as a build step to your workflow, allowing you to write CSS in a familiar way, without sacrificing page performance. gZipping your files seems to reduce some repetition, but I've yet to test how much it's able to work on in a stream without a comprehension of the entire file /shrug.
 
+### Numbers
+Using twitter.com (unauthenticated) as a benchmark
+
+##### CSS
+With gzip? | Before  | After   | Savings
+-----------|---------|---------|--------
+No         | 602,623 | 432,103 | 28%
+Yes        | 109,670 | 90,331  | 18%
+
+##### HTML
+With gzip? | Before  | After   | Savings
+-----------|---------|---------|--------
+No         | 58,326  | 54,138  | 7%
+Yes        | 13,063  | 12,842  | 2%
+
 ### Usage
 To install Terse globally, run `npm install -g`.
 ```
@@ -22,3 +37,6 @@ Options:
   -c, --concat <filename>     Concatenate the CSS files into <filename>
   -d, --destination <value>   Destination directory for output
 ```
+
+Copyright (c) 2015 Rich Gilbank
+Released under [MIT](https://github.com/richgilbank/Terse/blob/master/LICENSE)
