@@ -24,6 +24,7 @@
     "css": "^2.2.0",
     "lodash": "3.5.0",
     "phantomjs": "^1.9.15",
+    "prettysize": "0.0.3",
     "request": "^2.53.0"
   }
 }
