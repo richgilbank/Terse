@@ -27,3 +27,4 @@ var options = {
 terse(files, options, function(output) {
   console.log(output);
 });
+
